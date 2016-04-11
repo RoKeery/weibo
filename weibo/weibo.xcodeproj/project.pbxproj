@@ -16,6 +16,7 @@
 		F39D827D1CBB81C40066A1B6 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39D827C1CBB81C40066A1B6 /* MessageTableViewController.swift */; };
 		F39D827F1CBB81E40066A1B6 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39D827E1CBB81E40066A1B6 /* DiscoverTableViewController.swift */; };
 		F39D82811CBB81F80066A1B6 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39D82801CBB81F80066A1B6 /* ProfileTableViewController.swift */; };
+		F39D82831CBBAE180066A1B6 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39D82821CBBAE180066A1B6 /* MainTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F39D827C1CBB81C40066A1B6 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		F39D827E1CBB81E40066A1B6 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		F39D82801CBB81F80066A1B6 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		F39D82821CBBAE180066A1B6 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				F39D82771CB5594C0066A1B6 /* MainViewController.swift */,
+				F39D82821CBBAE180066A1B6 /* MainTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				F39D82811CBB81F80066A1B6 /* ProfileTableViewController.swift in Sources */,
 				F39D827B1CBB81A30066A1B6 /* HomeTableViewController.swift in Sources */,
 				F39D823E1CB52E5B0066A1B6 /* AppDelegate.swift in Sources */,
+				F39D82831CBBAE180066A1B6 /* MainTabBar.swift in Sources */,
 				F39D827D1CBB81C40066A1B6 /* MessageTableViewController.swift in Sources */,
 				F39D827F1CBB81E40066A1B6 /* DiscoverTableViewController.swift in Sources */,
 				F39D82781CB5594C0066A1B6 /* MainViewController.swift in Sources */,

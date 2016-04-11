@@ -13,6 +13,10 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //由于tabbar是只读,不能够直接操作,如果要修改,可以使用 KVC
+        let mainTabBar = MainTabBar()
+        //KVC 赋值
+        setValue(mainTabBar, forKey: "tabBar")
         //添加子视图控制器
         addChildViewControllers()
         
@@ -28,10 +32,14 @@ class MainViewController: UITabBarController {
     //重载
     private func addChildViewController(vc: UIViewController,title: String,imageName: String) {
         
+        //使用原生图片高亮显示,文字颜色
+        self.tabBar.tintColor = UIColor.orangeColor()
+        
         //实例化导航视图控制器
         let nav = UINavigationController(rootViewController: vc)
         vc.title = title
         vc.tabBarItem.image = UIImage(named: imageName)
+        
         //添加
         addChildViewController(nav)
     }
