@@ -10,6 +10,11 @@ import UIKit
 
 class MainViewController: UITabBarController {
     
+    //OC点击事件方法
+    @objc private func composeDidClick(){
+        print(#function)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,8 +25,11 @@ class MainViewController: UITabBarController {
         //添加子视图控制器
         addChildViewControllers()
         
+        //设置点击事件
+        mainTabBar.composeBtn.addTarget(self, action: #selector(composeDidClick), forControlEvents: .TouchUpInside)
         
     }
+    
     private func addChildViewControllers() {
         addChildViewController(HomeTableViewController(), title: "首页", imageName: "tabbar_home")
         addChildViewController(MessageTableViewController(), title: "信息", imageName: "tabbar_message_center")
