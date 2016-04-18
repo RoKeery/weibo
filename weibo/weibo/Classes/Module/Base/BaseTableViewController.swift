@@ -12,6 +12,7 @@ class BaseTableViewController: UITableViewController {
     
     //添加用户是否登录的标记
     var userLogin = false
+    var visitorLoginView: VisitorLoginView?
     
     
     //loadView 是苹果专门为手写代码准备的,等效于 sb/ xib
@@ -24,7 +25,8 @@ class BaseTableViewController: UITableViewController {
     
     private func loadVisitorView(){
         //view的大小在 viewDidLoad就会设置
-        view = VisitorLoginView()
+        visitorLoginView = VisitorLoginView()
+        view = visitorLoginView 
         
     }
     

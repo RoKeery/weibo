@@ -10,6 +10,33 @@ import UIKit
 
 class VisitorLoginView: UIView {
     
+    //设置页面信息
+    func setUIInfo(imageName: String?, title: String){
+        
+        iconView.hidden = false
+        tipLabel.text = title
+        if imageName != nil{
+            circleView.image = UIImage(named: imageName!)
+            iconView.hidden = true
+        }else{
+            //让circleView动起来
+            startAnimation()
+        }
+    }
+    
+    //转动动画
+    private func startAnimation(){
+        let anima = CABasicAnimation(keyPath: "transform.rotation")
+        //一直转
+        anima.repeatCount = MAXFLOAT
+        //转一圈
+        anima.toValue = 2 * M_PI
+        anima.duration = 20
+        //当动画结束或者视图处于非活跃状态, 动画不移除图层
+        anima.removedOnCompletion = false
+        circleView.layer.addAnimation(anima, forKey: nil)
+    }
+    
     //重写构造方法
     init(){
         super.init(frame: CGRectZero)
@@ -45,8 +72,10 @@ class VisitorLoginView: UIView {
         //设置提示文案的约束
         addConstraint(NSLayoutConstraint(item: tipLabel, attribute: .CenterX, relatedBy: .Equal, toItem: circleView, attribute: .CenterX, multiplier:  1.0, constant: 0))
         addConstraint(NSLayoutConstraint(item: tipLabel , attribute: .Top, relatedBy: .Equal, toItem: circleView, attribute: .Bottom , multiplier:  1.0, constant: 16))
-        //设置文字宽度约束
+        //设置文字宽度和高度的约束
         addConstraint(NSLayoutConstraint(item: tipLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 224))
+        addConstraint(NSLayoutConstraint(item: tipLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 35))
+
         //设置登录按钮约束
         addConstraint(NSLayoutConstraint(item: loginBtn, attribute: .Left, relatedBy: .Equal, toItem: tipLabel, attribute: .Left, multiplier:  1.0, constant: 0))
         addConstraint(NSLayoutConstraint(item: loginBtn , attribute: .Top, relatedBy: .Equal, toItem: tipLabel, attribute: .Bottom , multiplier:  1.0, constant: 16))
