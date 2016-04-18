@@ -23,9 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置主窗口并显示出来
         window?.makeKeyAndVisible()
         
+        //设置主题颜色
+        setThemeColor()
+        
         //设置根视图控制器
         window?.rootViewController = MainViewController()
         return true
+    }
+    
+    private func setThemeColor(){
+        UINavigationBar.appearance().tintColor = themeColor
+        UITabBar.appearance().tintColor = themeColor
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -19,6 +19,7 @@
 		F3A21E491CBCFCD900C8CC56 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A21E411CBCFCD900C8CC56 /* ProfileTableViewController.swift */; };
 		F3A21E4C1CBCFEC200C8CC56 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A21E4B1CBCFEC200C8CC56 /* BaseTableViewController.swift */; };
 		F3A21E4F1CBF86CE00C8CC56 /* VisitorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A21E4E1CBF86CE00C8CC56 /* VisitorLoginView.swift */; };
+		F3A21E511CC4D80400C8CC56 /* Comman.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A21E501CC4D80400C8CC56 /* Comman.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F3A21E411CBCFCD900C8CC56 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		F3A21E4B1CBCFEC200C8CC56 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = Base/BaseTableViewController.swift; sourceTree = "<group>"; };
 		F3A21E4E1CBF86CE00C8CC56 /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorLoginView.swift; sourceTree = "<group>"; };
+		F3A21E501CC4D80400C8CC56 /* Comman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comman.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +140,8 @@
 			children = (
 				F3A21E361CBCFCD900C8CC56 /* Module */,
 				F3A21E351CBCFCD900C8CC56 /* Model */,
-				F3A21E421CBCFCD900C8CC56 /* Tools */,
 				F3A21E431CBCFCD900C8CC56 /* ViewModel */,
+				F3A21E421CBCFCD900C8CC56 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 		F3A21E421CBCFCD900C8CC56 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F3A21E501CC4D80400C8CC56 /* Comman.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			files = (
 				F3A21E491CBCFCD900C8CC56 /* ProfileTableViewController.swift in Sources */,
 				F3A21E461CBCFCD900C8CC56 /* MainTabBar.swift in Sources */,
+				F3A21E511CC4D80400C8CC56 /* Comman.swift in Sources */,
 				F3A21E4C1CBCFEC200C8CC56 /* BaseTableViewController.swift in Sources */,
 				F3A21E451CBCFCD900C8CC56 /* HomeTableViewController.swift in Sources */,
 				F3A21E441CBCFCD900C8CC56 /* DiscoverTableViewController.swift in Sources */,

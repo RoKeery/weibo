@@ -8,7 +8,8 @@
 
 import UIKit
 
-class BaseTableViewController: UITableViewController {
+//协议是必选的方法,如果不实现就报错
+class BaseTableViewController: UITableViewController, VisitorLoginViewDelegate {
     
     //添加用户是否登录的标记
     var userLogin = false
@@ -26,7 +27,21 @@ class BaseTableViewController: UITableViewController {
     private func loadVisitorView(){
         //view的大小在 viewDidLoad就会设置
         visitorLoginView = VisitorLoginView()
+        //设置代理
+        visitorLoginView?.visitorDelegate = self
+        
         view = visitorLoginView 
+        
+        //页面左上角右上角按钮
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: #selector(BaseTableViewController.visitorWillRegister))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登录", style: .Plain, target: self, action: #selector(BaseTableViewController.visitorWillLogin))
+    }
+    
+    //visitorDelegate 实现协议方法
+    func visitorWillLogin() {
+        
+    }
+    func visitorWillRegister() {
         
     }
     

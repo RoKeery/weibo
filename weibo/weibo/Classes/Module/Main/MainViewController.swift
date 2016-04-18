@@ -41,7 +41,7 @@ class MainViewController: UITabBarController {
     private func addChildViewController(vc: UIViewController,title: String,imageName: String) {
         
         //使用原生图片高亮显示,文字颜色
-        self.tabBar.tintColor = UIColor.orangeColor()
+        //self.tabBar.tintColor = UIColor.orangeColor()
         
         //实例化导航视图控制器
         let nav = UINavigationController(rootViewController: vc)

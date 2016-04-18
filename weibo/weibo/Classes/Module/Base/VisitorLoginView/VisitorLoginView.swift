@@ -8,7 +8,27 @@
 
 import UIKit
 
+protocol VisitorLoginViewDelegate: NSObjectProtocol {
+    //协议方法
+    //登录
+    func visitorWillLogin()
+    //注册
+    func visitorWillRegister()
+}
+
 class VisitorLoginView: UIView {
+    
+    //声明代理属性
+    //属性默认是强引用 需要添加weak
+    weak var visitorDelegate: VisitorLoginViewDelegate?
+    
+    @objc func loginBtnDidClick(){
+        //代理调用协议方法
+        visitorDelegate?.visitorWillLogin()
+    }
+    @objc func registerBtnDidClick(){
+        visitorDelegate?.visitorWillRegister()
+    }
     
     //设置页面信息
     func setUIInfo(imageName: String?, title: String){
@@ -93,6 +113,10 @@ class VisitorLoginView: UIView {
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[backView]-(-34)-[registerBtn]", options: [], metrics: nil, views: ["backView": backView, "registerBtn": registerBtn]))
         //设置背景颜色
         backgroundColor = UIColor(white: 0.93, alpha: 1)
+        
+        //添加点击事件
+        loginBtn.addTarget(self, action: #selector(loginBtnDidClick), forControlEvents: .TouchUpInside)
+        registerBtn.addTarget(self, action: #selector(registerBtnDidClick), forControlEvents: .TouchUpInside)
     }
     
     //懒加载所有的控件
